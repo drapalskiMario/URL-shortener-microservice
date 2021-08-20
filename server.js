@@ -9,7 +9,7 @@ const app = express();
 // Basic Configuration
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb+srv://mariojunior:1234@cluster0.4oovf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGO_URI,
   { useNewUrlParser: true, useUnifiedTopology: true })
 
 const schema = new mongoose.Schema({ url: String })
